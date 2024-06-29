@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-  {/* <AppBar /> */}
+  <AppBar />
   <Hero />
   <Projects />
   <Skills />

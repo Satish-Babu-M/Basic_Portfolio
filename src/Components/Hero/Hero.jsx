@@ -1,8 +1,6 @@
 import styles from "./HeroStyles.module.css";
 import profileLight from "../../assets/Profile_Light.png";
 import profileDark from "../../assets/Profile_Dark.png";
-import sun from "../../assets/icons8-sun.svg"
-import moon from "../../assets/icons8-moon-30.png"
 import linkedInLight from "../../assets/icons8-linked-in.svg"
 import linkedInDark from "../../assets/icons8-linkedin.svg"
 import gitLight from "../../assets/icons8-git.svg"
@@ -12,7 +10,6 @@ import {useTheme} from "../../common/ThemeContext"
 
 function Hero() {
     const {theme, toggleTheme} = useTheme();
-    const themeIcon = (theme === 'light' ? sun : moon);
     const linkedInIcon = (theme === 'light' ? linkedInLight : linkedInDark);
     const gitIcon = (theme === 'light' ? gitLight : gitDark);
     const myImg = (theme === 'light' ? profileLight : profileDark);
@@ -24,11 +21,6 @@ function Hero() {
             <img className={styles.hero}
              src={myImg} alt="Profile Picture of Satish"
                /> 
-            <img className={styles.colorMode}
-             src={themeIcon} 
-             alt="Color theme"
-             onClick ={toggleTheme}
-             />
             </div>
         <div className= {styles.info}>
             <h1 className= "section-Title">Satish Babu <br /> Malempati</h1>

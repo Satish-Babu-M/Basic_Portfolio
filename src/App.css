@@ -7,6 +7,10 @@
   --form-text-color: #555;
   --footer-text-color: #888;
   --ring-color: #222;
+  --transparent-bg-color1: rgba(195, 195, 195, 0);
+  --transparent-bg-color3:rgba(195, 195, 195, 0.3);
+  --transparent-bg-color4:  rgba(195, 195, 195, 0);
+  --transparent-bg-color2:rgba(195, 195, 195, 0.3);
 }
 
 [data-theme='dark'] {
@@ -18,6 +22,10 @@
   --form-text-color: #fff;
   --footer-text-color: #bbb;
   --ring-color:#fff;
+  --transparent-bg-color1: rgba(255, 255, 255, 0);
+  --transparent-bg-color2:rgba(255, 255, 255, 0.1);
+  --transparent-bg-color3:rgba(255, 255, 255, 0.1);
+  --transparent-bg-color4:  rgba(255, 255, 255, 0);
 }
 
 body {
@@ -31,6 +39,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 60px;
+}
+
+.navigation{
+  z-index: 10000;
 }
 
 h1,
@@ -77,9 +89,22 @@ input{
   color: var(--ring-color);
 }
 
+ul{
+  background: linear-gradient(90deg, var(--transparent-bg-color1) 0%, var(--transparent-bg-color2) 25%, var(--transparent-bg-color3) 75%, var(--transparent-bg-color4) 100%);
+}
+
+ul a {
+  color: var(--text-color);
+}
+
+ul a:hover {
+  color: var(--text-color);
+}
+
 .login .inputBx input::placeholder {
   color: var(--ring-color);
 }
+
 
 /* .ring:hover i {
   border: 4px solid var(--ring-color);
